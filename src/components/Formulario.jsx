@@ -1,58 +1,57 @@
-import Swal from "sweetalert2"
-import { v4 as uuidv4 } from "uuid"
-import { useForm } from "../hooks/useForm"
+import Swal from 'sweetalert2'
+import { v4 as uuidv4 } from 'uuid'
+import { useForm } from '../hooks/useForm'
 
 const Formulario = ({ addTask }) => {
-
   const initialState = {
-    name: "",
-    description: "",
-    state: "pending",
-    priority: false
+    name: '',
+    description: '',
+    state: 'pending',
+    priority: false,
   }
 
   const [inputs, handleChange, reset] = useForm(initialState)
 
   const { name, description, state, priority } = inputs
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
-    if(!name.trim()) {
+    if (!name.trim()) {
       e.target[0].focus()
-      
+
       return Swal.fire({
-        title: "Error!",
-        text: "You must complete the task name",
-        icon: "error"
+        title: 'Error!',
+        text: 'You must complete the task name',
+        icon: 'error',
       })
     }
 
-    if(!description.trim()) {
+    if (!description.trim()) {
       e.target[1].focus()
-      
+
       return Swal.fire({
-        title: "Error!",
-        text: "You must complete the task description",
-        icon: "error"
+        title: 'Error!',
+        text: 'You must complete the task description',
+        icon: 'error',
       })
     }
 
     Swal.fire({
-      title: "success",
-      text: "Your task added",
-      icon: "success"
+      title: 'success',
+      text: 'Your task added',
+      icon: 'success',
     })
 
     addTask({
       name,
       description,
-      state: state === "pending" ? false : true,
+      state: state === 'pending' ? false : true,
       priority,
-      id: uuidv4()
+      id: uuidv4(),
     })
 
-    reset();
+    reset()
   }
 
   return (
@@ -92,16 +91,11 @@ const Formulario = ({ addTask }) => {
             checked={priority}
             onChange={handleChange}
           />
-          <label
-            className="form-check-label"
-            htmlFor="flexCheckDefault">
+          <label className="form-check-label" htmlFor="flexCheckDefault">
             Priority
           </label>
         </div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-        >
+        <button type="submit" className="btn btn-primary">
           Add
         </button>
       </form>

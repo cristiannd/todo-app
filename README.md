@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# ToDo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was create with [ReactJS](https://reactjs.org/) by the using of hooks.
+It is a task application, in which you can create, delete and complete. There is also a log of completed tasks. A task contains a title, a description, an option that allows you to choose whether the task is pending or completed, and finally, a checkbox to select whether it is of high priority. If the task has priority, it will be located at the top of the list of pending tasks.
 
-## Available Scripts
+<img src="./screenshots/website.png" alt="Website image">
 
-In the project directory, you can run:
+## Library
 
-### `npm start`
+The library I used was:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### [Sweet Alert 2](https://sweetalert2.github.io/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The alerts that exist are when a task is created and when an error occurs, such as when you want to create a task with an empty field.
 
-### `npm test`
+Add task:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="./screenshots/success-task.png" alt="Success add task image">
 
-### `npm run build`
+Error:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="./screenshots/error-add-task.png" alt="Error add task image">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### [Bootstrap 5](https://getbootstrap.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All the layout of the application is done with `bootstrap 5`.
 
-### `npm run eject`
+## Hooks
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The hooks used were `useState`, `useEffect` and a custom hook called `useForm`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `useForm`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+It has the function of obtaining the input of the form. It also has a method to reset the input.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Website
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can find this website hosted at: [https://todo-app-cristiannd.netlify.app/]
